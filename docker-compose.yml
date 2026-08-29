@@ -60,6 +60,7 @@ services:
       - *volume-localtime
     ports:
       - 5003:27017
+
   telegram-bot:
     << : *service-defaults
     image: rss-reader-telegram-bot:latest
@@ -78,6 +79,42 @@ services:
     # of the bot parameters without the need of rebuilding the whole image.
     environment:
       - CUSTOM_SETTINGS_PATH=/config/custom_settings.yml
+
+  # Additional modules.
+  rss-bridge-reddit-filter:
+    << : *service-defaults
+    image: rss-bridge-reddit-filter:latest
+    container_name: rss-reader-rss-bridge-reddit-filter
+    build: ./rss-bridge-reddit-filter/
+    volumes:
+      - *volume-timezone
+      - *volume-localtime
+    ports:
+      - 5004:8000
+    environment:
+      - UVICORN_PORT=8000
+      - RSS_BRIDGE_URL=http://rss-bridge:80/
+    profiles:
+      - rss-bridge
+
+  rss-bridge-ytdlp-wrapper:
+    << : *service-defaults
+    image: rss-bridge-ytdlp-wrapper:latest
+    container_name: rss-reader-rss-bridge-ytdlp-wrapper
+    build: ./rss-bridge-ytdlp-wrapper/
+    volumes:
+      - *volume-timezone
+      - *volume-localtime
+    ports:
+      - 5005:8000
+    environment:
+      - UVICORN_PORT=8000
+      - RSS_BRIDGE_URL=http://rss-bridge:80/
+      - DURATION_MAX=120
+      - FORMAT=bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best
+      - FORMAT_SORT=codec:h264:aac
+    profiles:
+      - rss-bridge
 
 networks:
   default:
