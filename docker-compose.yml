@@ -25,7 +25,7 @@ services:
     container_name: rss-reader-rss-bridge
     # Mapping "/config" allows for passing extra configuration to RSS-Bridge.
     volumes:
-      - ./rss-bridge/config:/config
+      - ./rss-bridge/config/custom/config.ini.php:/config/custom/config.ini.php
       - ./rss-bridge/custom_bridges/reddit-oauth/RedditBridge.php:/config/custom/RedditBridge.php:ro
       - ./rss-bridge/custom_bridges/youtube-shorts/YoutubeShortsBridge.php:/config/custom/YoutubeShortsBridge.php:ro
       - *volume-timezone
