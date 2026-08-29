@@ -2,3 +2,6 @@
 	path = telegram-bot/source-code
 	url = https://github.com/Electronic-Mango/rss-reader-telegram-bot.git
 	branch = main
+[submodule "rss-bridge-reddit-filter"]
+	path = rss-bridge-reddit-filter
+	url = git@github.com:Electronic-Mango/rss-bridge-reddit-filter.git
