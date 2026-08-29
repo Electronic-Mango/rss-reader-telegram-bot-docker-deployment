@@ -4,6 +4,16 @@ telegram:
   # Fill with your Telegram username, or leave empty for public access
   allowed_usernames: []
   persistence_file: /config/persistence
+  updates:
+    lookup_interval: 14400
+    lookup_interval_randomness: 0
+    lookup_initial_delay: 10
+    lookup_feed_delay: 120
+    lookup_feed_delay_randomness: 0
+    quiet_hours: []
+  messages:
+    default_image_path: /resources/default_image.png
+    send_media_timeout: 1800
 
 logging:
   log_path: /config/bot.log
