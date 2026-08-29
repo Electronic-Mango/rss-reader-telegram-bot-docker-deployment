@@ -8,3 +8,6 @@
 [submodule "rss-bridge-ytdlp-wrapper"]
 	path = rss-bridge-ytdlp-wrapper
 	url = git@github.com:Electronic-Mango/rss-bridge-ytdlp-wrapper.git
+[submodule "rss-bridge/custom_bridges/youtube-shorts"]
+	path = rss-bridge/custom_bridges/youtube-shorts
+	url = git@github.com:Electronic-Mango/rss-bridge-youtube-shorts.git
