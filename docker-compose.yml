@@ -26,6 +26,7 @@ services:
     # Mapping "/config" allows for passing extra configuration to RSS-Bridge.
     volumes:
       - ./rss-bridge/config:/config
+      - ./rss-bridge/custom_bridges:/custom_bridges
       - *volume-timezone
       - *volume-localtime
     ports:
