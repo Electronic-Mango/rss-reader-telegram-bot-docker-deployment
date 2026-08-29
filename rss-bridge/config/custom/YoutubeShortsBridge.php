@@ -1,1 +1,0 @@
-../../custom_bridges/youtube-shorts/YoutubeShortsBridge.php
