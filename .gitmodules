@@ -5,3 +5,6 @@
 [submodule "rss-bridge-reddit-filter"]
 	path = rss-bridge-reddit-filter
 	url = git@github.com:Electronic-Mango/rss-bridge-reddit-filter.git
+[submodule "rss-bridge-ytdlp-wrapper"]
+	path = rss-bridge-ytdlp-wrapper
+	url = git@github.com:Electronic-Mango/rss-bridge-ytdlp-wrapper.git
