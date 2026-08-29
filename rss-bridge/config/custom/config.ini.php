@@ -5,3 +5,7 @@ output = "http"
 
 [system]
 enabled_bridges[] = *
+
+[RedditBridge]
+app_id = ""
+app_secret = ""
