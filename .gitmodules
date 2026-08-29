@@ -4,13 +4,13 @@
 	branch = main
 [submodule "rss-bridge-reddit-filter"]
 	path = rss-bridge-reddit-filter
-	url = git@github.com:Electronic-Mango/rss-bridge-reddit-filter.git
+	url = https://github.com/Electronic-Mango/rss-bridge-reddit-filter.git
 [submodule "rss-bridge-ytdlp-wrapper"]
 	path = rss-bridge-ytdlp-wrapper
-	url = git@github.com:Electronic-Mango/rss-bridge-ytdlp-wrapper.git
+	url = https://github.com/Electronic-Mango/rss-bridge-ytdlp-wrapper.git
 [submodule "rss-bridge/custom_bridges/youtube-shorts"]
 	path = rss-bridge/custom_bridges/youtube-shorts
-	url = git@github.com:Electronic-Mango/rss-bridge-youtube-shorts.git
+	url = https://github.com/Electronic-Mango/rss-bridge-youtube-shorts.git
 [submodule "rss-bridge/custom_bridges/reddit-oauth"]
 	path = rss-bridge/custom_bridges/reddit-oauth
-	url = git@github.com:Electronic-Mango/rss-bridge-reddit-oauth.git
+	url = https://github.com/Electronic-Mango/rss-bridge-reddit-oauth.git
