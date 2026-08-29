@@ -3,7 +3,61 @@
 # Also use their default ports, rather than mapped one, since container is accessed directly.
 # For RSS-Bridge I recommend using Mrss format, since it seems that parsing it grants more details.
 # You can check main bot repo for more details regaring this file.
-RSS-Bridge feed type:
-  url: http://rss-bridge:80/some/rss/bridge/url/{source_pattern}&format=Mrss
-RSSHub feed type:
-  url: http://rss-hub:1200/some/rss/hub/url/{source_pattern}
+
+# Examples:
+# RSS-Bridge feed type:
+#   url: http://rss-bridge:80/some/rss/bridge/url/{source_pattern}&format=Mrss
+# RSSHub feed type:
+#   url: http://rss-hub:1200/some/rss/hub/url/{source_pattern}
+
+APOD:
+  url: http://rss-bridge:80/?action=display&bridge=NasaApodBridge&format=Mrss
+  show_title: true
+  show_description: false
+  sender_text_format: An Astronomy Picture of the Day
+
+
+Redditor:
+  url: http://rss-bridge:80/?action=display&bridge=RedditBridge&context=user&u={source_pattern}&score=0&d=new&t=all&search=&frontend=https%3A%2F%2Freddit.com&format=Mrss
+  show_title: true
+  show_description: false
+  sender_text_format: By <b>{name}</b> redditor
+
+Redditor (comics):
+  url: http://rss-bridge-reddit-filter:8000/user/comics?u={source_pattern}&score=0&d=new&t=all&frontend=https%3A%2F%2Freddit.com
+  show_title: true
+  show_description: false
+  sender_text_format: By <b>{name}</b> redditor (comics)
+
+Subreddit:
+  url: http://rss-bridge:80/?action=display&bridge=RedditBridge&context=multi&rs={source_pattern}&score=0&d=new&t=all&search=&frontend=https%3A%2F%2Freddit.com&format=Mrss
+  show_title: true
+  show_description: false
+  sender_text_format: On <b>{name}</b> subreddit
+
+
+Tumblr:
+  url: https://{source_pattern}.tumblr.com/rss
+  show_title: true
+  show_description: false
+  filters:
+    - Read the next episode→
+    - Read the previous episode→
+
+
+YouTube:
+  url: http://rss-bridge-ytdlp-wrapper:8000/rss?action=display&bridge=YoutubeBridge&context=By+custom+name&custom={source_pattern}
+  show_title: true
+  show_description: false
+
+YouTube Shorts:
+  url: http://rss-bridge-ytdlp-wrapper:8000/rss?action=display&bridge=YoutubeShortsBridge&item_limit=10&context=By+custom+name&custom={source_pattern}
+  show_title: true
+  show_description: false
+
+
+xkcd:
+  url: https://xkcd.com/rss.xml
+  show_title: true
+  show_description: true
+  sender_text_format: On <b>xkcd</b>
