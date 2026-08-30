@@ -11,6 +11,7 @@ telegram:
     lookup_feed_delay: 120
     lookup_feed_delay_randomness: 0
     quiet_hours: []
+    shuffle_updates: true
   messages:
     default_image_path: /resources/default_image.png
     send_media_timeout: 1800
