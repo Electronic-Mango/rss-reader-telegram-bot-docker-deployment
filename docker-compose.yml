@@ -81,6 +81,7 @@ services:
     # of the bot parameters without the need of rebuilding the whole image.
     environment:
       - CUSTOM_SETTINGS_PATH=/config/custom_settings.yml
+      - LOGURU_COLORIZE=YES
 
   # Additional modules.
   rss-bridge-reddit-filter:
