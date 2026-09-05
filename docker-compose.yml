@@ -34,6 +34,9 @@ services:
       - 5001:80
     profiles:
       - rss-bridge
+    env_file:
+      - path: ./rss-bridge/rss-bridge.env
+        required: false
 
   rss-hub:
     << : *service-defaults
