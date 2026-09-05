@@ -5,16 +5,17 @@ telegram:
   allowed_usernames: []
   persistence_file: /config/persistence
   updates:
-    lookup_interval: 14400
+    lookup_interval: 3600
     lookup_interval_randomness: 0
     lookup_initial_delay: 10
-    lookup_feed_delay: 120
+    lookup_feed_delay: 10
     lookup_feed_delay_randomness: 0
     quiet_hours: []
     shuffle_updates: true
   messages:
-    default_image_path: /resources/default_image.png
+    default_image_path: ~
     send_media_timeout: 1800
+    pin_videos: true
 
 logging:
   log_path: /config/bot.log
