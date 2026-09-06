@@ -85,6 +85,9 @@ services:
     environment:
       - CUSTOM_SETTINGS_PATH=/config/custom_settings.yml
       - LOGURU_COLORIZE=YES
+    env_file:
+      - path: ./telegram-bot/bot.env
+        required: false
 
   # Additional modules.
   rss-bridge-reddit-filter:
