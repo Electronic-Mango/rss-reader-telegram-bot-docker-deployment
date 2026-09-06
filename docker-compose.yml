@@ -26,8 +26,9 @@ services:
     # Mapping "/config" allows for passing extra configuration to RSS-Bridge.
     volumes:
       - ./rss-bridge/config/custom/config.ini.php:/config/custom/config.ini.php
-      - ./rss-bridge/custom_bridges/reddit-oauth/RedditBridge.php:/config/custom/RedditBridge.php:ro
-      - ./rss-bridge/custom_bridges/youtube-shorts/YoutubeShortsBridge.php:/config/custom/YoutubeShortsBridge.php:ro
+      - ./rss-bridge/custom-bridges/bridges/YoutubeBridge.php:/config/custom/YoutubeBridge.php:ro
+      - ./rss-bridge/custom-bridges/bridges/RedditBridge.php:/config/custom/RedditBridge.php:ro
+      - ./rss-bridge/custom-bridges/bridges/YoutubeShortsBridge.php:/config/custom/YoutubeShortsBridge.php:ro
       - *volume-timezone
       - *volume-localtime
     ports:
