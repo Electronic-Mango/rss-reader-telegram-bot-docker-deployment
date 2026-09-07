@@ -86,6 +86,15 @@ so no additional configuration is required.
 When Docker Compose is run with `--build` flag a new Docker image will be built,
 using Dockerfile in git submodule containing bot's source code.
 
+Docker Compose will load any custom environment variables from `./telegram-bot/bot.env` file.
+The file itself is added to `.gitignore` to not track any credentials, or secrets.
+For example, to configure bot token and allowed usernames without modifying tracked YAML file:
+
+```bash
+TELEGRAM_TOKEN='bot token'
+TELEGRAM_ALLOWED_USERNAMES='comma separated,list of,allowed usernames'
+```
+
 
 ### Docker Compose profiles
 In order to start either self-hosted RSS container you have to run Compose with their profiles:
