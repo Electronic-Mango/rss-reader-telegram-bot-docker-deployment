@@ -39,6 +39,15 @@ You can use the official
 [RSS-Bridge documentation for Docker](https://rss-bridge.github.io/rss-bridge/For_Hosts/Docker_Installation.html)
 for reference.
 
+Docker Compose will load any custom environment variables from `./rss-bridge/rss-bridge.env` file.
+The file itself is added to `.gitignore` to not track any credentials, or secrets.
+For example, setting Reddit credentials for an OAuth2 access:
+
+```bash
+RSSBRIDGE_RedditBridge_app_id='<app id>'
+RSSBRIDGE_RedditBridge_app_secret='<app secret>'
+```
+
 
 ### RSSHub
 RSSHub container can be started with `rss-hub` Compose profile.
