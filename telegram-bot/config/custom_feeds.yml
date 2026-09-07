@@ -2,7 +2,7 @@
 # When using RSS-Bridge and RSSHub use their service names, rather than IP.
 # Also use their default ports, rather than mapped one, since container is accessed directly.
 # For RSS-Bridge I recommend using Mrss format, since it seems that parsing it grants more details.
-# You can check main bot repo for more details regaring this file.
+# You can check main bot repo for more details regarding this file.
 
 # Examples:
 # RSS-Bridge feed type:

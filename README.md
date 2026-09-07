@@ -77,7 +77,7 @@ and rebuilding bot's Docker image.
 Whole `./telegram-bot/config/` subdirectory is mounted as a container volume,
 so there's no need to rebuild the image if you change any files there (like the feeds YAML).
 
-By default bot will also put there its interal logs, so you can access them without
+By default bot will also put there its internal logs, so you can access them without
 getting into the container.
 
 DB host parameter is already set to MongoDB container (as service name `mongo-db`),

@@ -7,7 +7,7 @@
 # First 3 will have their used ports mapped to host, but it's used only for debugging.
 # External access through host isn't needed, since bot accesses containers directly.
 # Each container has "unless-stopped" restart policy, so they should start when host reboots.
-# Techincally only bot and MongoDB is needed, however this serves as a nice deployment example.
+# Technically only bot and MongoDB is needed, however this serves as a nice deployment example.
 
 x-service-defaults: &service-defaults
   restart: unless-stopped
