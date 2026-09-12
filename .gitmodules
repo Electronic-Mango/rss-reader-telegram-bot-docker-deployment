@@ -6,10 +6,6 @@
 	path = rss-bridge-reddit-filter
 	url = https://github.com/Electronic-Mango/rss-bridge-reddit-filter.git
 	branch = main
-[submodule "rss-bridge-ytdlp-wrapper"]
-	path = rss-bridge-ytdlp-wrapper
-	url = https://github.com/Electronic-Mango/rss-bridge-ytdlp-wrapper.git
-	branch = main
 [submodule "rss-bridge/custom-bridges"]
 	path = rss-bridge/custom-bridges
 	url = https://github.com/Electronic-Mango/rss-bridge-custom-bridges.git
