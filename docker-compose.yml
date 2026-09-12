@@ -107,11 +107,11 @@ services:
     profiles:
       - rss-bridge
 
-  rss-bridge-ytdlp-wrapper:
+  ytdlp-rest-api:
     << : *service-defaults
-    image: rss-bridge-ytdlp-wrapper:latest
-    container_name: rss-reader-rss-bridge-ytdlp-wrapper
-    build: ./rss-bridge-ytdlp-wrapper/
+    image: ytdlp-rest-api:latest
+    container_name: rss-reader-ytdlp-rest-api
+    build: ./ytdlp-rest-api/
     volumes:
       - *volume-timezone
       - *volume-localtime
@@ -119,10 +119,10 @@ services:
       - 5005:8000
     environment:
       - UVICORN_PORT=8000
-      - RSS_BRIDGE_URL=http://rss-bridge:80/
-      - DURATION_MAX=120
+      - MAX_DURATION=120
       - FORMAT=bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best
       - FORMAT_SORT=codec:h264:aac
+      - LOGURU_COLORIZE=YES
     profiles:
       - rss-bridge
 
