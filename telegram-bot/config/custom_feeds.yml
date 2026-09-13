@@ -24,10 +24,12 @@ Redditor:
   sender_text_format: By <b>{name}</b> redditor
 
 Redditor (comics):
-  url: http://rss-bridge-reddit-filter:8000/user/comics?u={source_pattern}&score=0&d=new&t=all&frontend=https%3A%2F%2Freddit.com
+  url: http://rss-bridge:80/?action=display&bridge=RedditBridge&context=user&u={source_pattern}&score=0&d=new&t=all&search=&frontend=https%3A%2F%2Freddit.com&format=Mrss
   show_title: true
   show_description: false
   sender_text_format: By <b>{name}</b> redditor (comics)
+  entry_filters:
+    link: ".+/r/comics/"
 
 Subreddit:
   url: http://rss-bridge:80/?action=display&bridge=RedditBridge&context=multi&rs={source_pattern}&score=0&d=new&t=all&search=&frontend=https%3A%2F%2Freddit.com&format=Mrss
