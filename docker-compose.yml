@@ -91,22 +91,6 @@ services:
         required: false
 
   # Additional modules.
-  rss-bridge-reddit-filter:
-    << : *service-defaults
-    image: rss-bridge-reddit-filter:latest
-    container_name: rss-reader-rss-bridge-reddit-filter
-    build: ./rss-bridge-reddit-filter/
-    volumes:
-      - *volume-timezone
-      - *volume-localtime
-    ports:
-      - 5004:8000
-    environment:
-      - UVICORN_PORT=8000
-      - RSS_BRIDGE_URL=http://rss-bridge:80/
-    profiles:
-      - rss-bridge
-
   ytdlp-rest-api:
     << : *service-defaults
     image: ytdlp-rest-api:latest
