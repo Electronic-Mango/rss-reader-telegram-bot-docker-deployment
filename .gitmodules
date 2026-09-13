@@ -5,6 +5,8 @@
 [submodule "rss-bridge/custom-bridges"]
 	path = rss-bridge/custom-bridges
 	url = https://github.com/Electronic-Mango/rss-bridge-custom-bridges.git
+	branch = main
 [submodule "ytdlp-rest-api"]
 	path = ytdlp-rest-api
 	url = https://github.com/Electronic-Mango/ytdlp-rest-api.git
+	branch = main
