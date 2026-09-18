@@ -103,7 +103,7 @@ services:
       - 5005:8000
     environment:
       - UVICORN_PORT=8000
-      - MAX_DURATION=120
+      - MAX_DURATION=240
       - FORMAT=bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best
       - FORMAT_SORT=codec:h264:aac
       - LOGURU_COLORIZE=YES
