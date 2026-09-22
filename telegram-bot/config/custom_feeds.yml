@@ -56,7 +56,7 @@ YouTube:
     encode_http: true
 
 YouTube Shorts:
-  url:  http://rss-bridge:80/?action=display&bridge=YoutubeShortsBridge&item_limit=10&context=By+custom+name&custom={source_pattern}&format=Mrss
+  url: http://rss-bridge:80/?action=display&bridge=YoutubeShortsBridge&item_limit=10&context=By+custom+name&custom={source_pattern}&format=Mrss
   show_title: true
   show_description: false
   media_override:
