@@ -4,6 +4,7 @@ telegram:
   # Fill with your Telegram username, or leave empty for public access
   allowed_usernames: []
   persistence_file: /config/persistence
+  skip_latest_on_add: true
   updates:
     lookup_interval: 3600
     lookup_interval_randomness: 0
