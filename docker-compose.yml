@@ -105,7 +105,7 @@ services:
       - UVICORN_PORT=8000
       - MAX_DURATION=600
       - MAX_FILESIZE=50
-      - FORMAT=bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best
+      - FORMAT=bestvideo[height<=1440]+bestaudio/best[height<=1440]
       - FORMAT_SORT=codec:h264:aac
       - LOGURU_COLORIZE=YES
     profiles:
